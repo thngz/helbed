@@ -12,10 +12,8 @@
       };
     in {
       devShells.${system}.default = pkgs.mkShell {
-        packages = with pkgs; [
-          goose
-        ];
-                
+        packages = with pkgs; [ clang-tools gdb ];
+
       };
     };
 }
