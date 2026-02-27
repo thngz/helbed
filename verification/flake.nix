@@ -1,5 +1,5 @@
 {
-  description = "A very basic flake";
+  description = "Simple flake";
 
   inputs = { nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable"; };
 
@@ -13,12 +13,8 @@
     in {
       devShells.${system}.default = pkgs.mkShell {
         packages = with pkgs; [
-          nodejs_22
-          typescript-language-server
-          tailwindcss-language-server
-          typescript
-          vue-language-server
-          vscode-langservers-extracted
+          python312
+          uppaal
         ];
 
       };
