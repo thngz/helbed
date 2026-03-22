@@ -18,7 +18,7 @@
       in {
         devShells.default = with pkgs;
           mkShell {
-            buildInputs = [ rust-bin.beta.latest.default rust-analyzer clippy ];
+            buildInputs = [ rust-bin.stable.latest.default rust-analyzer clippy ];
 
           };
       });
