@@ -27,6 +27,9 @@
           python313Packages.jupyter-client
           python313Packages.ipython
           python313Packages.tkinter
+          python313Packages.torchvision
+          graphviz
+          uv
         ];
 
       };
