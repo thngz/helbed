@@ -38,6 +38,8 @@
           python313Packages.pyqt5
           qt5.qtbase
           libxcb
+          python313Packages.torchvision
+          graphviz
           uv
         ];
         shellHook = ''
