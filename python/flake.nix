@@ -20,7 +20,7 @@
           python313
           basedpyright
           python313Packages.requests
-          python313Packages.opencv4
+          python313Packages.opencv4Full
           python313Packages.scipy
           python313Packages.sympy
           python313Packages.numpy
@@ -32,10 +32,17 @@
           python313Packages.jupyter-client
           python313Packages.ipython
           python313Packages.tkinter
+          python313Packages.rasterio
           python313Packages.pycryptodome
+          python313Packages.pwntools
+          python313Packages.pyqt5
+          qt5.qtbase
+          libxcb
           uv
         ];
-
+        shellHook = ''
+          export QT_QPA_PLATFORM_PLUGIN_PATH="${pkgs.qt5.qtbase.bin}/lib/qt-${pkgs.qt5.qtbase.version}/plugins/platforms"
+        '';
       };
     };
 }
