@@ -18,6 +18,9 @@
       devShells.${system}.default = pkgs.mkShell {
         packages = with pkgs; [
             clojure
+            leiningen
+            clojure-lsp
+            cljfmt
         ];
 
       };
