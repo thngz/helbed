@@ -1,22 +1,24 @@
 {
   description = "A very basic flake";
 
-  inputs = { nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable"; };
+  inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+  };
 
-  outputs = { self, nixpkgs }:
+  outputs =
+    { self, nixpkgs }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
       };
-    in {
+    in
+    {
       devShells.${system}.default = pkgs.mkShell {
         packages = with pkgs; [
-          goose
-          yt-dlp
-          dockerfile-language-server
-          docker-compose-language-service
+          janet
+          jpm
         ];
 
       };

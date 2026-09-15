@@ -20,27 +20,35 @@
           python313
           basedpyright
           python313Packages.requests
+          python313Packages.opencv4Full
+          python313Packages.scipy
+          python313Packages.sympy
           python313Packages.numpy
           python313Packages.matplotlib
           python313Packages.black
           python313Packages.flask
+          python313Packages.fastecdsa
           python313Packages.jupyter-core
           python313Packages.jupyter-client
           python313Packages.ipython
           python313Packages.tkinter
           python313Packages.rasterio
+          python313Packages.pycryptodome
           python313Packages.pwntools
           python313Packages.pyqt5
-          python313Packages.duckdb
-          python313Packages.pyarrow
-          python313Packages.altair
-          python313Packages.rapidfuzz
-          marimo
+          
           qt5.qtbase
           qt5.qtwayland
           libxcb
+          python313Packages.torchWithRocm
+          #python313Packages.torchvision
           uv
           python313Packages.python-dotenv
+          python313Packages.ultralytics
+          python313Packages.imageio
+          python313Packages.av
+          python313Packages.imageio-ffmpeg
+          rocmPackages.rocrand
         ];
         shellHook = ''
           export QT_QPA_PLATFORM_PLUGIN_PATH="${pkgs.qt5.qtbase.bin}/lib/qt-${pkgs.qt5.qtbase.version}/plugins/platforms"

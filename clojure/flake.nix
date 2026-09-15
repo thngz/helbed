@@ -17,12 +17,13 @@
     {
       devShells.${system}.default = pkgs.mkShell {
         packages = with pkgs; [
-            clojure
-            leiningen
-            clojure-lsp
-            cljfmt
+          clojure
+          leiningen
+          clojure-lsp
+          cljfmt
+          codecrafters-cli
         ];
-
+        JAVA_HOME = "${pkgs.jdk}/lib/openjdk";
       };
     };
 }
