@@ -20,15 +20,20 @@
           python313
           basedpyright
           python313Packages.requests
+          python313Packages.opencv4Full
+          python313Packages.scipy
+          python313Packages.sympy
           python313Packages.numpy
           python313Packages.matplotlib
           python313Packages.black
           python313Packages.flask
+          python313Packages.fastecdsa
           python313Packages.jupyter-core
           python313Packages.jupyter-client
           python313Packages.ipython
           python313Packages.tkinter
           python313Packages.rasterio
+          python313Packages.pycryptodome
           python313Packages.pwntools
           python313Packages.pyqt5
           python313Packages.duckdb
@@ -39,6 +44,8 @@
           qt5.qtbase
           qt5.qtwayland
           libxcb
+          python313Packages.torchvision
+          graphviz
           uv
           python313Packages.python-dotenv
           mpremote

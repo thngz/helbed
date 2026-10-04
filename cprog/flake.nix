@@ -12,7 +12,7 @@
       };
     in {
       devShells.${system}.default = pkgs.mkShell {
-        packages = with pkgs; [ clang-tools gdb ];
+        packages = with pkgs; [ clang-tools gdb valgrind];
 
       };
     };
