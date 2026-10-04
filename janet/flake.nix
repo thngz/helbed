@@ -17,14 +17,8 @@
     {
       devShells.${system}.default = pkgs.mkShell {
         packages = with pkgs; [
-          goose
-          yt-dlp
-          dockerfile-language-server
-          docker-compose-language-service
-          claude-code
-          postgres-language-server
-          opentofu
-          azure-cli
+          janet
+          jpm
         ];
 
       };

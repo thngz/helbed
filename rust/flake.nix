@@ -29,11 +29,28 @@
           with pkgs;
           mkShell {
             buildInputs = [
-              rust-bin.stable.latest.default
+              (pkgs.rust-bin.stable.latest.default.override {
+                extensions = [
+                  "rustfmt"
+                  "clippy"
+                ];
+              })
               rust-analyzer
-              clippy
+              wayland
+              libxkbcommon
+              vulkan-loader
+              pkg-config
+              codecrafters-cli
             ];
-
+            LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath (
+              with pkgs;
+              [
+                wayland
+                libxkbcommon
+                vulkan-loader
+                libGL
+              ]
+            );
           };
       }
     );
